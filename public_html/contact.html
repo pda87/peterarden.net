@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+  <div id="wrapper">
+    <div class="container-fluid">
+	
+		<div id="headerandnavigationdiv">
+		</div>
+		<div id ="titleandcontactenvelope">
+		</div>
+		
+		<div id="fade-me">
+			<form method="post" name="myemailform" action="PHP/form-to-email.php">
+			<p><b>Name:</b>
+			<input type="text" name="name" size="20" id="betBox">
+			</p>
+			<p><B>Email:</B>
+			<input type="text" name="email" size="20" id="betBox"></p>
+			<p><B>Message:</B>
+			<textarea name="message" cols="30" wrap="virtual" rows="4" id="betBox">
+			</textarea></p>
+			<input id="gamebutton" class="btn btn-primary" type="submit" name="submit" value="Submit">
+			<input id="gamebutton" class="btn btn-primary" type="reset" name="reset" value="Reset">
+			</form>
+			<script language="JavaScript">
+			// Code for validating the form
+			// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+			// for details
+			var frmvalidator  = new Validator("myemailform");
+			frmvalidator.addValidation("name","req","Please provide your name"); 
+			frmvalidator.addValidation("email","req","Please provide your email"); 
+			frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+			</script>
+		</div>
+		
+
+	</div>
+  </div>
+  <div id="pagefooter">
+  </div>
+  </div>
+  </body>
+  <script type="text/JavaScript" src="JavaScript/scripts.js"></script>
+</html>
