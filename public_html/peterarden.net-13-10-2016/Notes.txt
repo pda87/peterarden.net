@@ -1,0 +1,9 @@
+ - stopwatch.js:
+  - Fixed issue where clicking "Start" again repeatedly sped up the stopwatch
+  - Not sure how accurate the timing is, though...
+
+ - script.js:
+  - Added better "Code" Glyphicon
+
+ - chess.js
+  - Fixed image path issue

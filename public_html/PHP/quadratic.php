@@ -20,6 +20,7 @@
 		<div id ="titleandcontactenvelope">
 		</div>
 
+		<div id="MainContentDiv">
 		<div id="fade-me">
 				
 				
@@ -84,6 +85,7 @@
 
 		?> 
 				
+			</div>
 			</div>
 			
 

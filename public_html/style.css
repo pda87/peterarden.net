@@ -86,6 +86,17 @@ body {
 	background-color:green;
 }
 
+#HeaderToggleButton {
+	width:100px;
+	margin:auto;
+	background-color:green;
+	height:30px;
+	border: solid 1px rgb(46, 109, 164);
+	border-radius: 5px;
+	padding:5px;
+	
+}
+
 #greenglyphicons {
 	color:green;
 	padding-right:10px;
@@ -144,8 +155,17 @@ body {
 	padding:50px;
 	margin:10px;
 }
+
 #timehere {
 	text-align:right;
+}
+
+#toggleDiv {
+	background-color:green;
+	height:30px;
+	border: solid 1px rgb(46, 109, 164);
+	border-radius: 5px;
+	padding:5px;
 }
 
 /* Footer keeps breaking when viewing on a mobile device */
