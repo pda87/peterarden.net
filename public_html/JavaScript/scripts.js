@@ -3,13 +3,20 @@ function createPage() {
 	getTitleAndGlyphicons();
 	getPageTitle();
 	//getFooter(); //Removed for now as it floats about haphazardly when viewing on mobile...
-	fadeIn();
 	clockFunction();
-	toggleNav();
-	toggleMainContentDiv();
-	fadeOut();
+	jQueryFunctions();
+
  }
 
+ function jQueryFunctions() {
+
+	fadeIn();
+ 	toggleNav();
+	toggleMainContentDiv();
+	fadeInFadeOut();
+ 
+}
+ 
 function fadeIn() {
 $(document).ready(function(){
 	
@@ -17,9 +24,20 @@ $('#fade-me').fadeIn(2000);
 });
 }
 
+function fadeInFadeOut() {
 
-function fadeOut() {
-	$("#headerbuttons").click(function() {  $(body).fadeOut()});
+var fadeOutValue = 0.5;
+var fadeInValue = 1;
+
+//"websitetitle" div fades out at the same time the main body is fading in
+jQuery(function() {$("#websitetitle").fadeTo(2000, fadeOutValue);})
+
+//When hovering over the "websitetitle" div, mouse over brings it back fully, mouse off re-fades it
+//mouse over
+jQuery(function() { $("#websitetitle").mouseover(function() { $("#websitetitle").fadeTo("fast", fadeInValue); }) });
+//mouse leave
+jQuery(function() { $("#websitetitle").mouseleave(function() { $("#websitetitle").fadeTo("slow", fadeOutValue); }) });
+	
 }
 
 function toggleNav() {
@@ -34,7 +52,6 @@ function toggleMainContentDiv(){
 	$(document).ready(function(){$("#HeaderToggleButton").click(function() { $("#MainContentDiv").toggle(1000) });});
 	
 }
-
  
 function getFooter() {
 	var dateNow = new Date();
@@ -134,4 +151,3 @@ var minutes;
 var seconds;
 
 createPage();
-
